@@ -12,7 +12,6 @@ Summary: Platform independent standalone library that plays Lottie Animation
 URL: https://github.com/Samsung/%{name}
 Source0: %{url}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 
-BuildRequires: rapidjson-devel
 BuildRequires: gtest-devel
 BuildRequires: gcc-c++
 BuildRequires: meson
