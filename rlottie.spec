@@ -13,6 +13,7 @@ URL: https://github.com/Samsung/%{name}
 Source0: %{url}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 
 BuildRequires: rapidjson-devel
+BuildRequires: gtest-devel
 BuildRequires: gcc-c++
 BuildRequires: meson
 BuildRequires: gcc
@@ -42,11 +43,14 @@ Requires: %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 sed -e "s/, 'werror=true'//" -i meson.build
 
 %build
-%meson -Dexample=false -Dtest=false -Dmodule=false
+%meson -Dtest=true -Dexample=false -Dmodule=false
 %meson_build
 
 %install
 %meson_install
+
+%check
+%meson_test
 
 %files
 %doc AUTHORS README.md
