@@ -31,7 +31,7 @@ with bodymovin, Sketch with Lottie Sketch Export, and from Haiku.
 For the first time, designers can create and ship beautiful animations
 without an engineer painstakingly recreating it by hand. Since the animation
 is backed by JSON they are extremely small in size but can be large in
-complexity!
+complexity.
 
 %package devel
 Summary: Development files for %{name}
@@ -45,7 +45,10 @@ Requires: %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 sed -e "s/, 'werror=true'//" -e "s/, 'optimization=s'//" -i meson.build
 
 %build
-%meson -Dtest=true -Dexample=false -Dmodule=false
+%meson \
+    -Dtest=true \
+    -Dexample=false \
+    -Dmodule=false
 %meson_build
 
 %install
