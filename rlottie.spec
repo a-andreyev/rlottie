@@ -40,7 +40,7 @@ Requires: %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 
 %prep
 %autosetup -n %{name}-%{commit0}
-sed -e "s/, 'werror=true'//" -i meson.build
+sed -e "s/, 'werror=true'//" -e "s/, 'optimization=s'//" -i meson.build
 
 %build
 %meson -Dtest=true -Dexample=false -Dmodule=false
