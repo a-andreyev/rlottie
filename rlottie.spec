@@ -1,6 +1,6 @@
-%global commit0 bfda7feee5dffd298c2b756219586c6c429152f8
+%global commit0 0a430201270dbe141f0c67b92348ee9c796e194e
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
-%global date 20190705
+%global date 20190707
 
 Name: rlottie
 Version: 0
@@ -70,5 +70,5 @@ sed -e "s/, 'werror=true'//" -e "s/, 'optimization=s'//" -i meson.build
 %{_libdir}/pkgconfig/%{name}.pc
 
 %changelog
-* Fri Jul 05 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 0-1.20190705gitbfda7fe
+* Mon Jul 08 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 0-1.20190707git0a43020
 - Initial SPEC release.
