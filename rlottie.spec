@@ -22,6 +22,8 @@ BuildRequires: gcc-c++
 BuildRequires: meson
 BuildRequires: gcc
 
+ExcludeArch: aarch64
+
 %description
 rlottie is a platform independent standalone C++ library for rendering
 vector based animations and art in realtime.
