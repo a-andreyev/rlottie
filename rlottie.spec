@@ -6,10 +6,12 @@ Name: rlottie
 Version: 0
 Release: 1.%{date}git%{shortcommit0}%{?dist}
 
-# Main source: LGPLv2.1+
-# rapidjson - MIT
-# freetype rasterizer - FreeType
-License: LGPLv2.1+ and MIT and FreeType
+# Main source: LGPLv2+
+# rapidjson (base) - MIT
+# rapidjson (msinttypes) - BSD
+# freetype rasterizer - FTL
+# vector (vinterpolator) - MPLv1.1
+License: LGPLv2+ and MIT and FTL and BSD and MPLv1.1
 Summary: Platform independent standalone library that plays Lottie Animation
 
 URL: https://github.com/Samsung/%{name}
