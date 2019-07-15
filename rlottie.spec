@@ -4,7 +4,7 @@
 
 Name: rlottie
 Version: 0
-Release: 1.%{date}git%{shortcommit0}%{?dist}
+Release: 2.%{date}git%{shortcommit0}%{?dist}
 
 # Main source: LGPLv2+
 # rapidjson (base) - MIT
@@ -51,7 +51,10 @@ sed -e "s/, 'werror=true'//" -e "s/, 'optimization=s'//" -i meson.build
 %build
 %meson \
     -Dtest=true \
+    -Dthread=true \
     -Dexample=false \
+    -Dcache=false \
+    -Dlog=false \
     -Dmodule=false
 %meson_build
 
@@ -72,5 +75,8 @@ sed -e "s/, 'werror=true'//" -e "s/, 'optimization=s'//" -i meson.build
 %{_libdir}/pkgconfig/%{name}.pc
 
 %changelog
+* Mon Jul 15 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 0-2.20190707git0a43020
+- Disabled internal cache (currently broken).
+
 * Mon Jul 08 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 0-1.20190707git0a43020
 - Initial SPEC release.
