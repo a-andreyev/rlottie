@@ -4,7 +4,7 @@
 
 Name: rlottie
 Version: 0
-Release: 2.%{date}git%{shortcommit0}%{?dist}
+Release: 3.%{date}git%{shortcommit0}%{?dist}
 
 # Main source: LGPLv2+
 # rapidjson (base) - MIT
@@ -75,6 +75,9 @@ sed -e "s/, 'werror=true'//" -e "s/, 'optimization=s'//" -i meson.build
 %{_libdir}/pkgconfig/%{name}.pc
 
 %changelog
+* Fri Jul 26 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0-3.20190707git0a43020
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
+
 * Mon Jul 15 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 0-2.20190707git0a43020
 - Disabled internal cache (currently broken).
 
