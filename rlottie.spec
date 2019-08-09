@@ -1,10 +1,10 @@
-%global commit0 0a430201270dbe141f0c67b92348ee9c796e194e
+%global commit0 33d4fca732943eb393c23b143e5783b463847193
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
-%global date 20190707
+%global date 20190805
 
 Name: rlottie
 Version: 0
-Release: 3.%{date}git%{shortcommit0}%{?dist}
+Release: 4.%{date}git%{shortcommit0}%{?dist}
 
 # Main source: LGPLv2+
 # rapidjson (base) - MIT
@@ -75,6 +75,9 @@ sed -e "s/, 'werror=true'//" -e "s/, 'optimization=s'//" -i meson.build
 %{_libdir}/pkgconfig/%{name}.pc
 
 %changelog
+* Fri Aug 09 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 0-4.20190805git33d4fca
+- Updated to latest snapshot.
+
 * Fri Jul 26 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0-3.20190707git0a43020
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 
