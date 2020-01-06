@@ -1,10 +1,10 @@
-%global commit0 33d4fca732943eb393c23b143e5783b463847193
+%global commit0 a718c7e2dfd7d292324ca50d596b02b786299252
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
-%global date 20190805
+%global date 20191224
 
 Name: rlottie
 Version: 0
-Release: 4.%{date}git%{shortcommit0}%{?dist}
+Release: 5.%{date}git%{shortcommit0}%{?dist}
 
 # Main source: LGPLv2+
 # rapidjson (base) - MIT
@@ -75,6 +75,9 @@ sed -e "s/, 'werror=true'//" -e "s/, 'optimization=s'//" -i meson.build
 %{_libdir}/pkgconfig/%{name}.pc
 
 %changelog
+* Mon Jan 06 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 0-5.20191224gita718c7e
+- Updated to latest snapshot.
+
 * Fri Aug 09 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 0-4.20190805git33d4fca
 - Updated to latest snapshot.
 
