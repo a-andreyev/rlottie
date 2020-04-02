@@ -1,6 +1,6 @@
-%global commit0 a718c7e2dfd7d292324ca50d596b02b786299252
+%global commit0 dcab762d9b4a8bd0a36c3f80d223fe75d0a1ada6
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
-%global date 20191224
+%global date 20200402
 
 Name: rlottie
 Version: 0
@@ -73,6 +73,9 @@ sed -e "s/, 'werror=true'//" -e "s/, 'optimization=s'//" -i meson.build
 %{_includedir}/%{name}*.h
 %{_libdir}/lib%{name}.so
 %{_libdir}/pkgconfig/%{name}.pc
+
+%post -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %changelog
 * Thu Jan 30 2020 Fedora Release Engineering <releng@fedoraproject.org> - 0-6.20191224gita718c7e
